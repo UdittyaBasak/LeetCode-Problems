@@ -6,5 +6,6 @@ class Solution {
             newstr.append(str.charAt(i));
         }
         return str.equals(newstr.toString());
+
     }
 }
