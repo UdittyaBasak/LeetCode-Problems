@@ -18,6 +18,15 @@ Problems are organized by **topic**:
 📁 Arrays
 📁 Linked Lists
 📁 Stacks
+📁 Prefix & Suffix
+📁 Two Pointers
+📁 Sliding Window
+📁 Binary Search
+📁 Hashing
+📁 Queues
+📁 Trees
+📁 Graphs
+📁 Dynamic Programming
 
 
 Each solution includes:
