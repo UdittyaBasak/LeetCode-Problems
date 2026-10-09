@@ -1,28 +1,32 @@
-
 class Solution {
     public int minInsertions(String s) {
         int open = 0;
-        int insertions = 0;
+        int insertion = 0;
 
-        for (char ch : s.toCharArray()) {
-            if (ch == '(') {
-                open += 2;
+        for (int i = 0; i<s.length(); i++){
 
-                if (open % 2 != 0) {
-                    insertions++;
-                    open--;
-                }
+            if(s.charAt(i) == '('){
+                open++;
             } else {
-                open--;
+            //checks if the next element is ')' or else adds 1 to insertion
+                if(i+1 < s.length() && s.charAt(i + 1) == ')'){
+                    i++;
+                } else {
+                    insertion++;
+                }
 
-                if (open < 0) {
-                    insertions++;
-                    open = 1;
+            //decreases open or else adds one for the '(' as incomplete
+                if(open > 0){
+                    open--;
+                } else {
+                    insertion++;
                 }
             }
         }
 
-        return insertions + open;
+        //adds double of th open bracket numbers for the left overs example: '(())) (('
+        insertion = insertion + open*2;
+
+        return insertion;
     }
 }
-
